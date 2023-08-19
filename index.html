@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook Login Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center; /* Center align content in container */
+            position: relative; /* To position the om logo */
+            border: 4px solid #007bff; /* Thick bold blue border */
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .result-box {
+            background-color: #444;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-box h2 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #222;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+            max-height: 200px;
+        }
+
+        .copy-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+
+        .made-by {
+            text-align: center;
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Style for the Facebook logo */
+        .facebook-logo {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Facebook Login Checker</h1>
+        <img src="{{ url_for('static', filename='facebook-logo.png') }}" alt="Facebook Logo" class="facebook-logo">
+        <form method="post">
+            <textarea name="uid_pass_list" rows="10" cols="50" placeholder="Enter user ID and password pairs in the format {uid}|{pass}, separated by line breaks"></textarea>
+            <br><br>
+            <input type="submit" value="Check Logins">
+        </form>
+        <div class="result-box">
+            <h2>Results:</h2>
+            <pre>{{ result }}</pre>
+            <button class="copy-button">Copy</button>
+        </div>
+        <p class="made-by">MADE BY PRESHAK BHATTARAI</p>
+    </div>
+</body>
+</html>

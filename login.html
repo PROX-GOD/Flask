@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST" action="/">
+        <label for="cookie">Cookie:</label>
+        <input type="text" name="cookie" required><br>
+
+        <label for="pw">Password:</label>
+        <input type="password" name="pw" required><br>
+        
+        <label for="next">Next Step:</label>
+        <input type="text" name="next" required><br>
+
+        <input type="submit" value="Login">
+    </form>
+    <div>
+        {% if result %}
+        <h2>Result:</h2>
+        <pre>{{ result }}</pre>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    background-image: url("facebook-logo.png"); /* Replace with your Nepal flag image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+    width: 60%;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+pre {
+    background-color: #222;
+    color: #00FF00;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
